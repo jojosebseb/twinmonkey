@@ -27,15 +27,21 @@ var hand = $('.hand');
 var penta = $('.penta');
 var estText = $('.est-text');
 var handText = $('.hand-text');
+var prop1 = $('.prop-1');
+var X = 0;
+var Y = 0;
+var A = 0;
+var Z = 0;
 
-parrallaxHome.mousemove(function(){
+
+parrallaxHome.mousemove(function(event){
   var Xm = event.pageX;
   var Ym = event.pageY;
-  var X = Xm - 950;
-  var Y = Ym -500;
-  var A = (X+Y)/2;
-  var Z = (-X+Y)/10;
-  var Zs = (X+Y)/5;
+  X = Xm - 950;
+  Y = Ym -500;
+  A = (X+Y)/2;
+  Z = (-X+Y)/10;
+
 
   penta.css({
     transform: 'translate(-50%, -50%) rotateZ('+Z/50+'deg)',
@@ -52,9 +58,27 @@ parrallaxHome.mousemove(function(){
     left: -X/5+'px',
     transform: 'translate(-10px, -120px) rotateZ('+-A/30+'deg)'
   })
+  // prop1.css({
+  //   top: -Y/10+'%',
+  //   left: -X/30+'%',
+  //   // transform: 'translate('+X/10+'px, '+Y/10+'px) rotateZ('+-A/30+'deg)'
+  // })
 })
+prop1.overlaps(prop1, function(){
+  console.log("asdss");
+});
 
-
+prop1.on('mouseover', function(){
+  var Xrand = Math.floor(Math.random() * 60) + 20 ;
+  var Yrand = Math.floor(Math.random() * 60) + 20 ;
+  var Zrand = Xrand * Yrand / 2;
+  $(this).css({
+    top: Xrand+'%',
+    left: Yrand+'%',
+    // transition: 'none'
+    transform: 'translate(-10px, -120px) rotateZ('+Zrand+'deg)'
+  })
+})
 
 var filterBtn = $('.filter>ul>li');
 var thumbs = $('.thumbs-parent');
@@ -75,7 +99,7 @@ filterBtn.on('click', function(){
 
 penta.on('mousedown', function(){
   penta.css({
-    transform: 'scale(1.1) translate(-50%, -50%)',
+    transform: 'translate(-50%, -50%) rotateZ(0) scale(1.1)',
     transition: 'all 0.3s ease'
   })
 })
@@ -144,7 +168,6 @@ initPage.mousemove(function(){
   var Y = Ym -500;
   var A = (X+Y)/2;
   var Z = (-X+Y)/10;
-  var Zs = (X+Y)/5;
 
   penta.css({
     transform: 'translate(-50%, -50%) rotateZ('+Z/50+'deg)',
@@ -157,8 +180,8 @@ initPage.mousemove(function(){
     transform: 'translate(-50%, -50%) rotateZ('+-Z/25+'deg)'
   })
   hand.css({
-    top: -Y/2+'px',
+    top: -Y/6+'px',
     left: -X/5+'px',
-    transform: 'translate(-10px, -120px) rotateZ('+-A*2+'deg)'
+    transform: 'translate(-10px, -120px) rotateZ('+-A/30+'deg)'
   })
 })

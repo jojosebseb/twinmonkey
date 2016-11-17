@@ -56,33 +56,42 @@ $main-gold : #c5a66c;
   z-index: 15;
   .logo-container{
     display: inline-block;
-    padding: 30px 0;
+    padding: 15px 0;
   }
   .nav-ul{
     display: inline-block;
     padding: 0px 0;
-    float: right;
+    /* float: right; */
     display: none;
+    position: fixed;
+    background: #000;
+    left: 0;
+    top: 78px;
+    /* border-top: 1px solid; */
+    /* height: 100%; */
+    width: 100%;
+    border-top: 1px solid $main-gold;
+    text-align: center;
     ul{
       li{
-        display: inline-block;
+        display: block;
         color: $main-gold;
         cursor: pointer;
-        padding: 30px 20px;
+        padding: 15px 20px;
         font-family: "GothamBold";
         position: relative;
         transition: all .3s ease;
       }
       li:after{
         content: "";
-        height: 18px;
-        width: 18px;
+        height: 15px;
+        width: 15px;
         background-image: url(../img/global/geometric.png);
         position: absolute;
         z-index: 8;
         left: 50%;
         transform: translateX(-50%) rotateZ(-45deg);
-        bottom: 10px;
+        bottom: -5px;
         background-size: contain;
         opacity: 0;
         transition: all .3s ease;
@@ -110,8 +119,7 @@ $main-gold : #c5a66c;
   float: right;
   width: 35px;
   height: 30px;
-  border: 1px solid white;
-  margin: 20px 0;
+  margin: 10px 0;
   padding: 3px 2px;
   .mobile-lines{
     margin: 4px 3px;
@@ -138,12 +146,12 @@ $main-gold : #c5a66c;
   opacity: 1;
 }
 .down-arrow{
-  width: 30px;
-  height: 30px;
+  width: 15px;
+  height: 15px;
   border-right: 1px solid white;
   border-bottom: 1px solid white;
   position: absolute;
-  bottom: 35px;
+  bottom: 15px;
   left: 50%;
   transform: rotateZ(45deg) translateX(-50%);
 }
@@ -280,7 +288,7 @@ $main-gold : #c5a66c;
   flex-wrap: wrap;
 }
 .thumbs-parent{
-  width: 25%;
+  width: 50%;
   cursor: pointer;
   position: relative;
   overflow: hidden;
@@ -500,7 +508,7 @@ $main-gold : #c5a66c;
     transform: translate(-50%, -50%) rotateZ(00deg);
     background-position: center center;
     background-size: contain;
-    padding: 8vw;
+    padding: 13vw;
     background-repeat: no-repeat;
     transition: all .6s ease;
     animation: CW-spin 80s infinite linear;
@@ -509,10 +517,9 @@ $main-gold : #c5a66c;
     transform: rotateZ(-80deg);
     transition: all .6s ease;
     animation: CCW-spin 80s infinite linear;
-    width: 180px;
+    width: 150px;
   }
   .spinner{
-    display: none;
     width: 100vw;
     height: 100vw;
     margin: auto;
@@ -520,7 +527,8 @@ $main-gold : #c5a66c;
     border: 1px solid #333;
     border-radius: 50%;
     left: 50%;
-    transform: translateX(-50%) rotateZ(-80deg);
+    top: 23%;
+    transform: translate(-50%, -50%) rotateZ(-80deg);
     transition: all .6s ease;
     animation: CW-spin2 50s infinite linear;
   }
@@ -532,7 +540,7 @@ $main-gold : #c5a66c;
     left: 50%;
     transform: translateX(-50%);
     width:0;
-    height: 80px;
+    height: 40px;
   }
   .line-2{
     content: "";
@@ -542,7 +550,7 @@ $main-gold : #c5a66c;
     left: 50%;
     transform: translateX(-50%);
     width:0;
-    height: 80px;
+    height: 40px;
   }
   .enter-btn{
     font-family: OcraExt;
