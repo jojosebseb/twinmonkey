@@ -172,10 +172,9 @@ $main-gold : #c5a66c;
   background-image: url(../img/index/home-bg.png);
   opacity: 0.5;
   .penta{
-    display: none;
     background-image: url(../img/index/penta.png);
-    height: 24vw;
-    width: 24vw;
+    height: 300px;
+    width: 300px;
     position: absolute;
     background-position: center center;
     background-size: cover;
@@ -184,48 +183,55 @@ $main-gold : #c5a66c;
     transform: translate(-50%, -50%);
   }
   .hand{
-    height: 110%;
+    width: 180px;
     z-index: 5;
-    transform: translateY(-100px) translateX(-30px);
-    position: relative;
-    transform-origin: 210px 210px;
+    transform: translateY(-50%) translateX(-50%);
+    position: absolute;
+    top: 50%;
+    left: 50%;
   }
 
   .hand-text{
     font-family: Friz;
     color: white;
     opacity: 0.7;
-    font-size: 45px;
+    font-size: 35px;
     z-index: 4;
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
-    bottom: 20px;
+    bottom: -45px;
     width: 120%;
     text-align: center;
     letter-spacing: 1px;
     .gap{
-      width: 160px;
+      width: 0px;
       display: inline-block;
     }
   }
   .est-text{
     width: 800px;
-    color: $main-gold;
+    color: #c5a66c;
     position: absolute;
-    top: 50%;
+    bottom: 0%;
     left: 50%;
     transform: translate(-50%, -50%);
     font-size: 18px;
     font-family: OcraExt;
     font-weight: bold;
     .gap{
-      width: 450px;
+      width: 100px;
       display: inline-block;
     }
   }
 }
-
+.prop-1{
+  position: absolute;
+  top: 30%;
+  left: 10%;
+   animation: float-1 9s ease-in-out infinite;
+  transition: top 1.3s ease, left 1.3s ease, transform 1.6s ease, background .5s ease;
+}
 #Story{
   background-image: url(../img/vid.mp4);
   .video{

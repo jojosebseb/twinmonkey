@@ -1,11 +1,4 @@
-$( window ).resize(function() {
-  if ($(window).width() < 1080) {
-    console.log("dsa");
-  }
-  else {
-    console.log("asd");
-  }
-});
+
 
 $(function() {
   $('a[href*="#"]:not([href="#"])').click(function() {
@@ -34,36 +27,7 @@ var A = 0;
 var Z = 0;
 
 
-parrallaxHome.mousemove(function(event){
-  var Xm = event.pageX;
-  var Ym = event.pageY;
-  X = Xm - 950;
-  Y = Ym -500;
-  A = (X+Y)/2;
-  Z = (-X+Y)/10;
 
-
-  penta.css({
-    transform: 'translate(-50%, -50%) rotateZ('+Z/50+'deg)',
-    transition: 'none'
-  })
-  estText.css({
-    transform: 'translate(-50%, -50%) rotateZ('+Z/15+'deg)'
-  })
-  handText.css({
-    transform: 'translate(-50%, -50%) rotateZ('+-Z/25+'deg)'
-  })
-  hand.css({
-    top: -Y/6+'px',
-    left: -X/5+'px',
-    transform: 'translate(-10px, -120px) rotateZ('+-A/30+'deg)'
-  })
-  // prop1.css({
-  //   top: -Y/10+'%',
-  //   left: -X/30+'%',
-  //   // transform: 'translate('+X/10+'px, '+Y/10+'px) rotateZ('+-A/30+'deg)'
-  // })
-})
 prop1.overlaps(prop1, function(){
   console.log("asdss");
 });
@@ -97,12 +61,7 @@ filterBtn.on('click', function(){
 
 })
 
-penta.on('mousedown', function(){
-  penta.css({
-    transform: 'translate(-50%, -50%) rotateZ(0) scale(1.1)',
-    transition: 'all 0.3s ease'
-  })
-})
+
 
 var hovTint = $('.hover-tint');
 var popupOverlay = $('.popup-parent');
@@ -161,27 +120,73 @@ enterBtn.on('click',function(){
   })
 })
 
-initPage.mousemove(function(){
-  var Xm = event.pageX;
-  var Ym = event.pageY;
-  var X = Xm - 950;
-  var Y = Ym -500;
-  var A = (X+Y)/2;
-  var Z = (-X+Y)/10;
 
-  penta.css({
-    transform: 'translate(-50%, -50%) rotateZ('+Z/50+'deg)',
-    transition: 'none'
+
+
+$( window ).resize(function() {
+
+});
+if ($(window).width() < 1080) {
+  console.log("dsa");
+}
+else {
+  penta.on('mousedown', function(){
+    penta.css({
+      transform: 'translate(-50%, -50%) rotateZ(0) scale(1.1)',
+      transition: 'all 0.3s ease'
+    })
   })
-  estText.css({
-    transform: 'translate(-50%, -50%) rotateZ('+Z/15+'deg)'
+  parrallaxHome.mousemove(function(event){
+    var Xm = event.pageX;
+    var Ym = event.pageY;
+    X = Xm - 950;
+    Y = Ym -500;
+    A = (X+Y)/2;
+    Z = (-X+Y)/10;
+    penta.css({
+      transform: 'translate(-50%, -50%) rotateZ('+Z/50+'deg)',
+      transition: 'none'
+    })
+    estText.css({
+      transform: 'translate(-50%, -50%) rotateZ('+Z/15+'deg)'
+    })
+    handText.css({
+      transform: 'translate(-50%, -50%) rotateZ('+-Z/25+'deg)'
+    })
+    hand.css({
+      top: -Y/6+'px',
+      left: -X/5+'px',
+      transform: 'translate(-10px, -120px) rotateZ('+-A/30+'deg)'
+    })
+    // prop1.css({
+    //   top: -Y/10+'%',
+    //   left: -X/30+'%',
+    //   // transform: 'translate('+X/10+'px, '+Y/10+'px) rotateZ('+-A/30+'deg)'
+    // })
   })
-  handText.css({
-    transform: 'translate(-50%, -50%) rotateZ('+-Z/25+'deg)'
+
+  initPage.mousemove(function(){
+    var Xm = event.pageX;
+    var Ym = event.pageY;
+    var X = Xm - 950;
+    var Y = Ym -500;
+    var A = (X+Y)/2;
+    var Z = (-X+Y)/10;
+
+    penta.css({
+      transform: 'translate(-50%, -50%) rotateZ('+Z/50+'deg)',
+      transition: 'none'
+    })
+    estText.css({
+      transform: 'translate(-50%, -50%) rotateZ('+Z/15+'deg)'
+    })
+    handText.css({
+      transform: 'translate(-50%, -50%) rotateZ('+-Z/25+'deg)'
+    })
+    hand.css({
+      top: -Y/6+'px',
+      left: -X/5+'px',
+      transform: 'translate(-10px, -120px) rotateZ('+-A/30+'deg)'
+    })
   })
-  hand.css({
-    top: -Y/6+'px',
-    left: -X/5+'px',
-    transform: 'translate(-10px, -120px) rotateZ('+-A/30+'deg)'
-  })
-})
+}
