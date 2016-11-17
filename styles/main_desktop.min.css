@@ -401,10 +401,10 @@
   background-image: url(../img/index/footer-bg.png);
   padding: 5vw 0; }
 
-#FooterForm {
+form {
   width: 450px;
   margin: 50px auto; }
-  #FooterForm .footer-input {
+  form .footer-input {
     width: 100%;
     display: block;
     background: #050505;
@@ -416,10 +416,10 @@
     -webkit-transition: all .3s ease;
     transition: all .3s ease;
     outline: none; }
-  #FooterForm textarea.footer-input {
+  form textarea.footer-input {
     height: 140px;
     resize: none; }
-  #FooterForm .footer-input:focus {
+  form .footer-input:focus {
     background: #eee;
     color: black;
     border: 1px solid #c5a66c; }
