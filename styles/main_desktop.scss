@@ -71,6 +71,9 @@ $main-gold : #c5a66c;
         position: relative;
         -webkit-transition: all .3s ease;
         transition: all .3s ease;
+        a{
+          font-family: "GothamBold";
+        }
       }
       li:after{
         content: "";
@@ -268,7 +271,7 @@ $main-gold : #c5a66c;
     background-size: contain;
     -webkit-transform: translate(-50%, -50%);
             transform: translate(-50%, -50%);
-    background-image: url(../img/index/black-crumble.png);
+    // background-image: url(../img/index/black-crumble.png);
     background-position: center center;
     padding: 65px;
     width: 1000px;
@@ -281,7 +284,7 @@ $main-gold : #c5a66c;
     position: relative;
   }
   .paragraph{
-    text-align: justify;
+    text-align: center;
     margin-top: 10px;
     line-height: 27px;
     color: $main-gold;
@@ -351,6 +354,27 @@ $main-gold : #c5a66c;
   -webkit-transition: all .5s ease;
   transition: all .5s ease;
   opacity: 1;
+  max-height: 24vw;
+}
+.load-more-btn {
+    text-transform: uppercase;
+    position: relative;
+    bottom: -20px;
+    letter-spacing: 2px;
+    border: 1px solid white;
+    display: block;
+    width: 150px;
+    padding: 10px 20px;
+    font-size: 12px;
+    // cursor: por;
+    cursor: pointer;
+    margin: auto;
+    transition: all .3s ease;
+    color: white;
+}
+.load-more-btn:hover{
+  background: white;
+  color: black;
 }
 .thumbs-parent.nonactive{
   -webkit-transform: scale(.5);
@@ -401,13 +425,17 @@ $main-gold : #c5a66c;
   -webkit-transition: all .3s cubic-bezier(0.88, -0.07, 0.17, 1.04);
   transition: all .3s cubic-bezier(0.88, -0.07, 0.17, 1.04);
   letter-spacing: 1px;
+  left: 50%;
+  transform: translateX(-50%);
 }
 .magnifier{
   bottom: 15%;
   color: white;
   position: absolute;
   -webkit-transition: all .3s cubic-bezier(0.88, -0.07, 0.17, 1.04);
-  transition: all .3s cubic-bezier(0.88, -0.07, 0.17, 1.04)
+  transition: all .3s cubic-bezier(0.88, -0.07, 0.17, 1.04);
+  left: 50%;
+  transform: translateX(-50%);
 }
 .thumbs-parent:hover{
   .thumb-img{
@@ -426,17 +454,22 @@ $main-gold : #c5a66c;
   }
   .img-caption{
     top: 30%;
-
+    left: 50%;
+    transform: translateX(-50%);
   }
   .magnifier{
     bottom: 40%;
+    left: 50%;
+    transform: translateX(-50%);
   }
 }
 
 #Book{
   background-image: url(../img/index/contact-bg.png);
+  height: 80vh;
+  min-height: 100%;
   .ocra-small{
-    padding-top: 9vw;
+    padding-top: 6vw;
   }
   .book-module{
     img{
@@ -517,22 +550,25 @@ form{
 .popup-parent{
   width: 100%;
   height: 100%;
-  background: rgba(0,0,0,0.5);
+  background: rgba(20,20,20,0.75);
   z-index: 15;
   position: fixed;
   display: none;
   .popup-img-container{
-    padding: 5px;
-    background: white;
+    // padding: 5px;
+    // background: white;
+    box-shadow: 0px 0px 60px 12px #000;
     position: absolute;
-    top: 50%;
+    top: 48%;
     left: 50%;
     -webkit-transform: translate(-50%, -50%);
             transform: translate(-50%, -50%);
+            height: 90%;
   }
   .popup-img{
     display: block;
     min-height: 500px;
+    height: 100%;
   }
 }
 .mousetrail{
@@ -648,8 +684,9 @@ form{
     text-transform: uppercase;
     z-index: 25;
     width: 400px;
-    background: black;
-    border: 1px solid white;
+    // background: black;
+      // border: 1px solid white;
+    text-align: center;
   }
   .enter-btn::after{
     content: "";
